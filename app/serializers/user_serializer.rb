@@ -2,7 +2,7 @@ class UserSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
   attributes :id,
     :name,
-    :email
+    :email,
     :images
 
     def images
