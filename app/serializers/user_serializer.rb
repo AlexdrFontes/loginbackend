@@ -8,7 +8,7 @@ class UserSerializer < ActiveModel::Serializer
     def images
       return unless object.images.attachments
       image_urls = object.images.map do |image|
-        rails_blob_path(image, only_path:true)
+        rails_blob_path(image, only_path: true)
       end
       image_urls
     end
