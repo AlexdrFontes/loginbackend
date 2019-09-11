@@ -5,7 +5,6 @@ class V1::Users::RegistrationsController < Devise::RegistrationsController
     return unless params[:email] && params[:password]
     build_resource(sign_up_params)
     resource.save
-    puts resource.persisted?
     if resource.persisted?
       token = WebToken.encode(resource)
       json_response Jwt.new(token: token)

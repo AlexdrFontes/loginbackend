@@ -1,5 +1,6 @@
 module WebToken
   SECRET = Rails.application.credentials.secret_key_base
+  puts SECRET
   EXPIRY = (Time.now + 2.weeks).to_i
   class << self
     def decode(token)

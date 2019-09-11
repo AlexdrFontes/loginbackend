@@ -3,7 +3,7 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id,
     :name,
     :email
-    #:images
+    :images
 
     def images
       return unless object.images.attachments
