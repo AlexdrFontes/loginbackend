@@ -19,6 +19,7 @@ gem 'devise'
 gem 'jwt'
 gem 'rack-cors'
 gem 'active_model_serializers'
+gem "aws-sdk-s3", require: false
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
