@@ -13,9 +13,8 @@ class V1::UsersController < ApplicationController
   end
 
   def update
-   
     return render_not_found! unless @user
-    
+
     update = @user.update!(permited_params)
     @user.images.attach(params.require(:images))  if params[:images].present?
     if update
